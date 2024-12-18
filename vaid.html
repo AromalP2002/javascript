@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <from id="from">
+        <input type="text" placeholder="name" required> <br>
+        <input type="password" name="" placeholder="password" id="pswd" required>
+        <ul>
+            <li id ="len"> length min 8 chr</li>
+            <li id ="cap"> min 1 cap letter</li>
+            <li id ="sm"> min 1 sm letter</li>
+            <li id ="spl"> min 1 spl chr</li>
+            <li id ="no"> min 1 no</li>
+
+        </ul>
+        <input type="submit" value="Add">
+    </from>
+    <script>
+        // let pswd=document.getElementById("pswd")
+        // let len =document.getElementById("len")
+        // let cap =document.getElementById("cap")
+        // let no =document.getElementById("no")
+        // let sm =document.getElementById("sm")
+        // let spl =document.getElementById("spl")
+
+        // pswd.addEventListener('input',function(){
+        //     let password=pswd.value
+        //     len.style.color=password.length>=8 ? 'green':'red'
+        //     cap.style.color= /[A-Z]/.test(password) ? 'green':'red'
+        //     sm.style.color= /[a-z]/.test(password) ? 'green':'red'
+        //     no.style.color= /\d/.test(password) ? 'green':'red'
+        //     spl.style.color= /[@#$%&*]/.test(password) ? 'green':'red'
+
+        // })
+
+    class school{
+        constructor(){
+            this.clg='ekm'
+        }
+    } 
+    class std extends school{
+        constructor(std_name,std_cur){
+            super()
+            this.std_name=std_name
+            this.std_cur=std_cur
+            this.notes = 'python django notes'
+
+        }
+        display(){
+            console.log(this.std_name,this.std_cur,this.clg,this.notes);
+
+        }
+    }
+    let std1 = new std('manu','py')
+    std1.display()   
+    </script>
+      
+</body>
+</html>
