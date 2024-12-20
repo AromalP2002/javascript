@@ -41,26 +41,50 @@
 
         // })
 
-    class school{
-        constructor(){
-            this.clg='ekm'
-        }
-    } 
-    class std extends school{
-        constructor(std_name,std_cur){
-            super()
-            this.std_name=std_name
-            this.std_cur=std_cur
-            this.notes = 'python django notes'
+    // class school{
+    //     constructor(){
+    //         this.clg='ekm'
+    //     }
+    // } 
+    // class std extends school{
+    //     constructor(std_name,std_cur){
+    //         super()
+    //         this.std_name=std_name
+    //         this.std_cur=std_cur
+    //         this.notes = 'python django notes'
 
-        }
-        display(){
-            console.log(this.std_name,this.std_cur,this.clg,this.notes);
+    //     }
+    //     display(){
+    //         console.log(this.std_name,this.std_cur,this.clg,this.notes);
 
-        }
+    //     }
+    // }
+    // let std1 = new std('manu','py')
+    // std1.display()   
+//demo
+const main = async(url) => {
+    try{
+        const response = await fetch(url)
+        const data = await response.json()
+        return [response,null]
     }
-    let std1 = new std('manu','py')
-    std1.display()   
+    catch(error){
+        return [null,error]
+    }
+    
+    
+}
+const fetchdata = async ()=> {
+    const [response,error]=await main("https://dummyjson.com/products")
+    if (response){
+        console.log(response);
+    }
+    else{
+        console.log(error);
+
+    }
+}
+fetchdata()
     </script>
       
 </body>
